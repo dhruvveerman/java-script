@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function optiLanguage(langName){
+        const myLi = document.createElement('li')
+        myLi.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(myLi)
+    }
+    optiLanguage('golang')
+
+    const secondLang = document.querySelector("li:nth-child(1)")
+    const myLi = document.createElement('li')
+    myLi.textContent = "mojo"
+    secondLang.replaceWith(myLi)
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
